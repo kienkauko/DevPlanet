@@ -6,7 +6,7 @@ services:
     restart: always  
     environment:
       POSTGRES_USER: mobifone
-      POSTGRES_PASSWORD: abc
+      POSTGRES_PASSWORD: mobifone
       POSTGRES_DB: shangchireview
     volumes:
       - dbvolume:/var/lib/postgresql/data
@@ -21,7 +21,7 @@ services:
     image: backend:v1 # tên image chúng ta xây dựng ở bước trước
     environment:
       DB_USER: mobifone
-      DB_PASS: abc
+      DB_PASS: mobifone
       DB: shangchireview
       DB_HOST: db
     links:
