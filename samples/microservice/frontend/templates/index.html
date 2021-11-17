@@ -1,14 +1,12 @@
 <html>
 <head>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <style>
     body{
-        background-image: url('https://xefun.vn/wp-content/uploads/2021/11/BMW-M8-Coupe-ba%CC%82%CC%81t-ngo%CC%9B%CC%80-xua%CC%82%CC%81t-hie%CC%A3%CC%82n-trong-phim-Shang-Chi-va%CC%80-The-Legend-of-The-Ten-Rings-cu%CC%89a-Marvel-Studios-2-1.jpeg');
-        background-blend-mode: overlay;
-        background-color: rgba(255, 255, 255, 0.486);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+        align-items: center;
+        background: linear-gradient(to top left, #28b487, #7dd56f);
     }
 
     .main-div{
@@ -39,10 +37,19 @@
     }
     
     .nav-item {
-        font: 30px;
-        color: white;
-        margin-left: 40px;
-        margin-right: 40px;
+        position: relative;
+        background-color: #04AA6D;
+        border: none;
+        font-size: 13px;
+        color: #FFFFFF;
+        padding: 20px;
+        width: 200px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
     }
 
     .nav-item:hover {
@@ -50,30 +57,55 @@
         margin-left: 40px;
         margin-right: 40px;
         background: white;
+        font-family: 'Roboto Medium', sans-serif;
     }
 
-    textarea{
+    textarea {
         width: 400px;
         height: 100px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #999;
+        resize: none;
+        overflow: auto;
     }
 
     h1{
-        font-size: 80px;
-        color: black;
+        font-size: 60px;
+        color: white;
     }
     
     .submit{
-        font-size: 20px;
-        color: white;
-        background:steelblue;
-        
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #04AA6D;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
     }
+    .submit:hover {background-color: #3e8e41}
+
+    .submit:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+}
     input{
         width: 400px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-shadow: 1px 1px 1px #999;
+        resize: none;
+        overflow: auto;
     }
 
     label{
         font-size: 30px;
+        font-family: 'Roboto Medium', sans-serif;
         
     }
 
@@ -104,7 +136,7 @@
     <div class="main-container">
 
     <br>
-    <i><h1> shangchi Reviews </h1></i>
+    <h1> Future Internet Lab </h1>
     </div>
 
 </div>
