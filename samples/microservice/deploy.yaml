@@ -1,38 +1,38 @@
 version: '3.1'
 
 services:
-  db:
-    image: postgres
-    restart: always
+  db:     # tên của service, ở đây là service databased
+    image: postgres  # image của service, ở đây sử dụng image có sẵn trên DockerHub
+    restart: always  
     environment:
-      POSTGRES_USER: john
-      POSTGRES_PASSWORD: example
-      POSTGRES_DB: endgame
+      POSTGRES_USER: mobifone
+      POSTGRES_PASSWORD: mobifone
+      POSTGRES_DB: shangchireview
     volumes:
       - dbvolume:/var/lib/postgresql/data
     
   adminer:
-    image: adminer
+    image: adminer # image quản lý database, dùng image có sẵn 
     restart: always
     ports:
-      - 9090:8080
+      - 9090:8080 # nối cổng 8080 của container đến cổng 9090 của máy vật lý
 
   backend:
-    image: endgamebackend:v1
+    image: backend:v1 # tên image chúng ta xây dựng ở bước trước
     environment:
-      DB_USER: john
-      DB_PASS: example
-      DB: endgame
+      DB_USER: mobifone
+      DB_PASS: mobifone
+      DB: shangchireview
       DB_HOST: db
     links:
-      - db
+      - db  # cho phép service db và service adminer kết nối được với nhau
 
   frontend:
-    image: endgamefrontend:v1
+    image: frontend:v1 
     ports:
-      - 80:5000
+      - 80:5000 # nối cổng 5000 của container đến cổng 80 của máy vật lý
     links:
-      - backend
+      - backend 
 
 volumes:
   dbvolume:
